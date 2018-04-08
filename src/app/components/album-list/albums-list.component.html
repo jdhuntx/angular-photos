@@ -1,0 +1,10 @@
+<h1>Photo Gallery</h1>
+
+<ul class="image-grid">
+	<li *ngFor="let album of albums">
+		<a routerLink="/albums/{{album.id}}">
+			<img src="{{album.photoUrl}}" alt="{{album.title}}" title="{{album.title}}" />
+			<span>{{album.title}}</span>
+		</a>
+	</li>
+</ul>
