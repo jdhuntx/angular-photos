@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { AlbumsListComponent } from './components/album-list/albums-list.component';
@@ -16,6 +16,7 @@ import { ROUTES } from './app.routes';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(ROUTES, { useHash: false, preloadingStrategy: PreloadAllModules })
   ],
   providers: [PhotosService, PhotosConfig],

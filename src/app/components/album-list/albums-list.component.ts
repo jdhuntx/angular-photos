@@ -18,10 +18,10 @@ export class AlbumsListComponent implements OnInit {
   }
 
   getAlbums() {
-    // this.photosService.getPhotosets()
-    //   .subscribe(
-    //   albums => { this.albums = albums; },
-    //   error => this.errorMessage = <any>error);
+    this.photosService.getPhotosets()
+      .subscribe(
+      albums => { this.albums = albums; },
+      error => this.errorMessage = <any>error);
   }
 
 }
